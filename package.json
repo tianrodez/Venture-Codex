@@ -1,0 +1,60 @@
+{
+  "name": "venture-codex-theme",
+  "displayName": "Venture Codex Theme",
+  "description": "Venture forth. Code in vivid colors. A high-contrast, readable theme with hexadic elemental accents across four coordinated variants: Dark, Light, High Contrast Dark, and High Contrast Light.",
+  "version": "0.58.1",
+  "publisher": "tianrodez",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "dark",
+    "light",
+    "high-contrast",
+    "vivid",
+    "colorful",
+    "wcag-aaa",
+    "wcag-aa",
+    "venture",
+    "codex",
+    "vibrant",
+    "coding",
+    "developer",
+    "programming",
+    "venture-codex"
+  ],
+  "homepage": "https://github.com/vibrant-coding/venture-codex",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vibrant-coding/venture-codex"
+  },
+  "license": "MIT",
+  "contributes": {
+    "themes": [
+      {
+        "label": "Venture Codex Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/venture-codex-dark.json"
+      },
+      {
+        "label": "Venture Codex Light",
+        "uiTheme": "vs",
+        "path": "./themes/venture-codex-light.json"
+      },
+      {
+        "label": "Venture Codex High Contrast Dark",
+        "uiTheme": "hc-black",
+        "path": "./themes/venture-codex-high-contrast-dark.json"
+      },
+      {
+        "path": "./themes/venture-codex-high-contrast-light.json",
+        "label": "Venture Codex High Contrast Light",
+        "uiTheme": "hc-light"
+      }
+    ]
+  }
+}
