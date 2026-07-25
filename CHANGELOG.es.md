@@ -2,6 +2,10 @@
 
 Todos los cambios notables de Venture Codex se documentaran en este archivo.
 
+### [0.58.2] - 2026-07-24
+
+Nombre del paquete cambiado a `venture-codex-theme` para evitar conflicto con un intento previo de publicación. Actualizado `package.json` con nuevo nombre, displayName, homepage y URL del repositorio.
+
 ## [0.58.1] - 2026-07-11
 
 ### Cambiado (HC Light - Colores de Sticky Scroll corregidos)
