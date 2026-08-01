@@ -4,8 +4,7 @@ All notable changes to Venture Codex will be documented in this file.
 
 ## [0.58.3] - 2026-07-24
 
-Added author field to package.json for proper attribution. Added icon field to package.json for extension icon display in VS Code Marketplace.
-
+Added author field to package.json for proper attribution. Added icon field to package.json for extension icon display in VS Code Marketplace.d70fba06582fdafcc6978f39defb93955
 ## [0.58.2] - 2026-07-24
 
 Package name changed to `venture-codex-theme` to avoid conflict with previous attempt to publish. Updated `package.json` with new name, displayName, homepage, and repository URL.
