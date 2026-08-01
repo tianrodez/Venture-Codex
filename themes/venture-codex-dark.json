@@ -1307,9 +1307,7 @@
         "meta.tag.sgml",
         "meta.tag.sgml.html",
         "entity.name.tag.tsx",
-        "entity.name.tag.jsx",
-        "meta.tag.tsx",
-        "meta.tag.jsx"
+        "entity.name.tag.jsx"
       ],
       "settings": {
         "foreground": "#88DDA8"

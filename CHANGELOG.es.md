@@ -4,9 +4,37 @@ Todos los cambios notables de Venture Codex se documentaran en este archivo.
 
 ### [0.58.3] - 2026-07-24
 
-Agregado campo de autor en package.json para la atribución adecuada. Agregado campo de icono en package.json para mostrar el icono de la extensión en VS Code Marketplace.
+### Corregido (Color de String Template)
 
-d70fba06582fdafcc6978f39defb93955
+El `String Template` rule usaba el color de foreground (blanco/teal oscuro) en lugar del color gold de las strings regulares. Esto causaba que las template literals (backticks) aparecieran en blanco en lugar de gold como las demás strings.
+
+Fixed en los 4 themes:
+
+| Theme | Antes | Ahora |
+|---|---|---|
+| Dark | `#F0F0F5` (white) | `#FFE055` (gold) |
+| Light | `#1F3838` (dark teal) | `#B07818` (gold) |
+| HC Dark | `#FFFFFF` (white) | `#FFE070` (gold) |
+| HC Light | `#0F1818` (dark teal) | `#B07818` (gold) |
+
+### Corregido (Scope de HTML Native Tag)
+
+El `HTML Native Tag` rule usaba `meta.tag.tsx` y `meta.tag.jsx` como scopes, que son demasiado amplios — aplican a TODO el contenido del tag, incluyendo el texto entre `<label>` y `</label>`. Esto causaba que el texto dentro de JSX tags apareciera en color mint como si fuera un tag.
+
+Removidos `meta.tag.tsx` y `meta.tag.jsx` de los scopes. Ahora solo scopes específicos a nombres de tags:
+
+- `entity.name.tag.html`
+- `entity.name.tag.match.html`
+- `meta.tag.sgml`
+- `meta.tag.sgml.html`
+- `entity.name.tag.tsx`
+- `entity.name.tag.jsx`
+
+Aplicado en los 4 themes.
+
+### Added
+
+Agregado campo de autor en package.json para la atribución adecuada. Agregado campo de icono en package.json para mostrar el icono de la extensión en VS Code Marketplace.
 ### [0.58.2] - 2026-07-24
 
 Nombre del paquete cambiado a `venture-codex-theme` para evitar conflicto con un intento previo de publicación. Actualizado `package.json` con nuevo nombre, displayName, homepage y URL del repositorio.
