@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "Venture Codex High Contrast Dark",
   "type": "hc",
   "semanticHighlighting": true,
@@ -1566,7 +1566,7 @@
         "punctuation.definition.template-expression"
       ],
       "settings": {
-        "foreground": "#FFFFFF"
+        "foreground": "#FFE070"
       }
     },
     {
@@ -2021,16 +2021,16 @@
         "foreground": "#A0A8B5"
       }
     },
-		{
-			"name": "Markup - Quote",
-			"scope": [
-				"markup.quote"
-			],
-			"settings": {
-				"foreground": "#A0A8B5",
-				"fontStyle": "italic"
-			}
-		},
+    {
+      "name": "Markup - Quote",
+      "scope": [
+        "markup.quote"
+      ],
+      "settings": {
+        "foreground": "#A0A8B5",
+        "fontStyle": "italic"
+      }
+    },
     {
       "name": "Markdown - Link",
       "scope": [

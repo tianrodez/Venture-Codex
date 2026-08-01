@@ -2,6 +2,14 @@
 
 Todos los cambios notables de Venture Codex se documentaran en este archivo.
 
+### [0.58.3] - 2026-07-24
+
+Agregado campo de autor en package.json para la atribución adecuada. Agregado campo de icono en package.json para mostrar el icono de la extensión en VS Code Marketplace.
+
+### [0.58.2] - 2026-07-24
+
+Nombre del paquete cambiado a `venture-codex-theme` para evitar conflicto con un intento previo de publicación. Actualizado `package.json` con nuevo nombre, displayName, homepage y URL del repositorio.
+
 ## [0.58.1] - 2026-07-11
 
 ### Cambiado (HC Light - Colores de Sticky Scroll corregidos)
