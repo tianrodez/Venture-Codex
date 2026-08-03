@@ -2,7 +2,7 @@
   "name": "venture-codex-theme",
   "displayName": "Venture Codex Theme",
   "description": "Venture forth. Code in vivid colors. A high-contrast, readable theme with hexadic elemental accents across four coordinated variants: Dark, Light, High Contrast Dark, and High Contrast Light.",
-  "version": "0.58.3",
+  "version": "0.58.4",
   "publisher": "tianrodez",
   "engines": {
     "vscode": "^1.75.0"

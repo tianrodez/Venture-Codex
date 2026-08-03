@@ -1,8 +1,40 @@
 ﻿# Changelog
 
-Todos los cambios notables de Venture Codex se documentaran en este archivo.
+Todos los cambios notables de Venture Codex se documentarán en este archivo.
 
-### [0.58.3] - 2026-07-24
+## [0.58.4] - 2026-07-25
+
+### Corregido (Docstring de Python)
+
+El rule `String Template` en Python estaba sobreescribiendo los docstrings (`"""..."""`), haciendo que aparecieran como strings regulares en lugar de documentación. Se agregó un rule dedicado `Python Docstring` en los 4 themes para colorear los docstrings (y sus delimitadores `"""` / `'''`) como comentarios, con estilo italic.
+
+| Theme | Color docstring | Estilo |
+|---|---|---|
+| Dark | `#94A89C` (sage) | italic |
+| Light | `#8C7C70` (warm soft) | italic |
+| HC Dark | `#A0A8B5` (grey) | italic |
+| HC Light | `#8C7C70` (warm soft) | italic |
+
+### Corregido (Parámetro de función en Python)
+
+El rule `Function Parameter` usaba colores sage/grey que parecían comentarios. En el theme Dark el color era `#9CA898` (igual que `Comments`). Los parámetros ahora usan **naranja Ren Sword v2** (`#FF6B0F` Dark, `#C06820` Light, `#FF7050` HC Dark, `#C06820` HC Light) con estilo italic, y el scope está restringido solo a Python:
+
+```
+source.python variable.parameter.function
+```
+
+Esto significa que solo los parámetros de función de Python obtienen el color naranja; otros lenguajes (JS, TS, C#, etc.) mantienen su coloreado por defecto.
+
+### Corregido (Keywords lógicos de Python)
+
+Los keywords de Python `and`, `or`, `not`, `in`, `is` estaban siendo matcheados por el rule `Operators` (color slate/grey, misma familia que los comentarios). Ahora están en el rule `Keyword`, por lo que se renderizan en el color de keyword (mint en Dark, forest en Light).
+
+El rule `Operators` ya no incluye el scope general `keyword.operator.logical`. En su lugar, se agregaron scopes específicos de Python a `Keyword`:
+
+- `keyword.operator.logical.python` (`and`, `or`, `not`)
+- `keyword.operator.word.python` (`in`, `is`, `not`)
+
+## [0.58.3] - 2026-07-24
 
 ### Corregido (Color de String Template)
 

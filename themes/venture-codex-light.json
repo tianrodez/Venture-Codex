@@ -1405,7 +1405,6 @@
       "name": "Operators",
       "scope": [
         "keyword.operator.comparison",
-        "keyword.operator.logical",
         "keyword.operator.arithmetic",
         "keyword.operator.assignment",
         "keyword.operator.ternary",
@@ -1569,14 +1568,10 @@
     },
     {
       "name": "Function Parameter",
-      "scope": [
-        "variable.parameter.function",
-        "meta.function.parameters",
-        "entity.name.variable.parameter.cs"
-      ],
+      "scope": "source.python variable.parameter.function",
       "settings": {
-        "fontStyle": "bold italic",
-        "foreground": "#8C7C70"
+        "foreground": "#C06820",
+        "fontStyle": "italic"
       }
     },
     {
@@ -2649,6 +2644,25 @@
       ],
       "settings": {
         "foreground": "#8C7C70"
+      }
+    },
+    {
+      "name": "Python Docstring",
+      "scope": [
+        "string.quoted.docstring.multi.python",
+        "string.quoted.docstring.multi.single.python",
+        "string.quoted.docstring.multi.starts.single.python",
+        "string.quoted.docstring.multi.ends.single.python",
+        "punctuation.definition.string.begin.docstring.multi.python",
+        "punctuation.definition.string.end.docstring.multi.python",
+        "punctuation.definition.string.begin.docstring.multi.single.python",
+        "punctuation.definition.string.end.docstring.multi.single.python",
+        "punctuation.definition.string.begin.python",
+        "punctuation.definition.string.end.python"
+      ],
+      "settings": {
+        "foreground": "#8C7C70",
+        "fontStyle": "italic"
       }
     }
   ],
