@@ -2,6 +2,19 @@
 
 All notable changes to Venture Codex will be documented in this file.
 
+## [0.58.5] - 2026-07-25
+
+### Fixed (Button hover color)
+
+In Dark and High Contrast Dark themes, `button.hoverBackground` was set to washed-out sage green (`#A8C893` / `#C0E8A5`) that did not match the theme's saturated palette and was lighter than the button background, producing the inverse of the intended hover effect.
+
+| Theme | Before | After |
+|---|---|---|
+| Dark | `#A8C893` (desaturated sage) | `#76C997` (darker mint, indicates hover) |
+| HC Dark | `#C0E8A5` (light sage) | `#9DD9A0` (darker mint, indicates hover) |
+
+The new colors are darker variants of the theme's mint accent, making the hover state clearly distinguishable from the default background. Light and HC Light themes were already correct (hover darker than background).
+
 ## [0.58.4] - 2026-07-25
 
 ### Fixed (Python Docstring)
