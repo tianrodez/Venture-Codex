@@ -2,6 +2,21 @@
 
 All notable changes to Venture Codex will be documented in this file.
 
+## [0.59.0] - 2026-09-27
+
+### Improved (Find match visibility)
+
+The `Ctrl+F` find highlight was barely visible, especially on the current line: `editor.findMatchHighlightBackground` matched `selectionHighlightBackground` or the editor background itself, and in the Dark theme `editor.findMatchBorder` / `editor.findMatchHighlightBorder` were set to the editor background color (an invisible border), so the current match lost its only definition. In some files (diff editor, notebooks, selections) the matches simply disappeared.
+
+| Theme | Current match | Other matches |
+|---|---|---|
+| Dark | `#3A4748` + invisible border → `#4E6063` + `#7E9599` border | `#252E30` (invisible) → `#8FA5A850` (translucent, blends with any row background) |
+| Light | unchanged (`#D4B580` + `#C06820`) | `#3A5A8C30` + beige border → `#3A5A8C55` + `#3A5A8C` border; removed forced amber `findMatchHighlightForeground` |
+| HC Dark | unchanged (`#3A4748` + `#FFE070`) | opaque `#A0A8B5` (unreadable text) → `#A0A8B560` translucent + solid `#FFE070` border |
+| HC Light | `#D4B580` + `#705000` | was identical to current match → softer `#E8D8B0` + same `#705000` border (current vs. other now distinguishable) |
+
+The same values were mirrored in `terminal.findMatch*` in all four themes, which also fixes HC Light's near-black `#3A3838` terminal other-match block. Minimap and overview ruler find marks were left unchanged (they were already high-visibility).
+
 ## [0.58.5] - 2026-07-25
 
 ### Fixed (Button hover color)

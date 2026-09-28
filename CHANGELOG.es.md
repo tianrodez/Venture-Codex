@@ -2,6 +2,21 @@
 
 Todos los cambios notables de Venture Codex se documentarán en este archivo.
 
+## [0.59.0] - 2026-09-27
+
+### Mejorado (Visibilidad del resaltado de búsqueda)
+
+El resaltado de `Ctrl+F` era apenas visible, especialmente sobre la línea actual: `editor.findMatchHighlightBackground` coincidía con `selectionHighlightBackground` o con el propio fondo del editor, y en el theme Dark `editor.findMatchBorder` / `editor.findMatchHighlightBorder` estaban fijados al color de fondo del editor (borde invisible), por lo que la coincidencia actual perdía su única definición. En algunos archivos (diff editor, notebooks, selecciones) las coincidencias simplemente desaparecían.
+
+| Theme | Coincidencia actual | Otras coincidencias |
+|---|---|---|
+| Dark | `#3A4748` + borde invisible → `#4E6063` + borde `#7E9599` | `#252E30` (invisible) → `#8FA5A850` (translúcido, se mezcla con cualquier fondo de fila) |
+| Light | sin cambios (`#D4B580` + `#C06820`) | `#3A5A8C30` + borde beige → `#3A5A8C55` + borde `#3A5A8C`; eliminado el ámbar forzado de `findMatchHighlightForeground` |
+| HC Dark | sin cambios (`#3A4748` + `#FFE070`) | `#A0A8B5` opaco (texto ilegible) → `#A0A8B560` translúcido + borde `#FFE070` sólido |
+| HC Light | `#D4B580` + `#705000` | idéntica a la coincidencia actual → `#E8D8B0` más suave + mismo borde `#705000` (ahora se distinguen) |
+
+Los mismos valores se replicaron en `terminal.findMatch*` de los cuatro themes, lo que además corrige el bloque casi negro `#3A3838` de otras coincidencias en el terminal de HC Light. Las marcas de búsqueda en minimapa y overview ruler se dejaron sin cambios (ya eran de alta visibilidad).
+
 ## [0.58.5] - 2026-07-25
 
 ### Corregido (Color de hover de botón)
